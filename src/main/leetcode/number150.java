@@ -17,7 +17,7 @@ public class number150 {
             }
             Stack<Integer> stack = new Stack<>();
             for (int i = 0; i < length; i++) {
-                int tmp;
+                int tmp=0;
                 try {
                     tmp = Integer.valueOf(tokens[i]);
                     stack.push(tmp);
