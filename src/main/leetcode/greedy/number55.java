@@ -1,4 +1,4 @@
-package main.leetcode;
+package main.leetcode.greedy;
 
 /**
  * @program: Leetcode

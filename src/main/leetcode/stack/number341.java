@@ -1,4 +1,4 @@
-package main.leetcode;
+package main.leetcode.stack;
 
 import java.util.Iterator;
 import java.util.List;
