@@ -6,6 +6,10 @@ package main.leetcode.greedy;
  * @create: 2019-10-13 19:47
  **/
 
+/*
+谁剩的多就先用谁，如果出现俩一样就换字母。
+ */
+
 public class number984 {
     class Solution {
         public String strWithout3a3b(int A, int B) {
