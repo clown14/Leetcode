@@ -23,45 +23,42 @@ resStack, 存放字符串
  */
 
 public class number394 {
-    class Solution {
-        public String decodeString(String s) {
-            if (s.isEmpty() || s == null) {
-                return s;
-            }
-            Stack<Integer> countStack = new Stack<>();
-            Stack<String> resStack = new Stack<>();
-            String res = "";
-            int idx = 0;
+    public String decodeString(String s) {
+        if (s.isEmpty() || s == null) {
+            return s;
+        }
+        Stack<Integer> countStack = new Stack<>();
+        Stack<String> resStack = new Stack<>();
+        String res = "";
+        int idx = 0;
 
-            while (idx < s.length()) {
-                char c = s.charAt(idx);
-                if (Character.isDigit(c)) {
-                    int count = 0;
-                    while (Character.isDigit(idx)) {
-                        count = count * 10 + (s.charAt(idx) - '0');
-                        idx++;
-                    }
-                } else if (c == '[') {
-                    resStack.push(res);
-                    res = "";
-                    idx++;
-                } else if (c == ']') {
-                    StringBuilder sb = new StringBuilder(resStack.pop());
-                    int repeat = countStack.pop();
-                    while (repeat-- > 0) {
-                        sb.append(res);
-                    }
-                    res = sb.toString();
-                    idx++;
-                } else {
-                    res += c;
+        while (idx < s.length()) {
+            char c = s.charAt(idx);
+            if (Character.isDigit(c)) {
+                int count = 0;
+                while (Character.isDigit(idx)) {
+                    count = count * 10 + (s.charAt(idx) - '0');
                     idx++;
                 }
+            } else if (c == '[') {
+                resStack.push(res);
+                res = "";
+                idx++;
+            } else if (c == ']') {
+                StringBuilder sb = new StringBuilder(resStack.pop());
+                int repeat = countStack.pop();
+                while (repeat-- > 0) {
+                    sb.append(res);
+                }
+                res = sb.toString();
+                idx++;
+            } else {
+                res += c;
+                idx++;
             }
-            return res;
         }
+        return res;
     }
-
 }
 
     

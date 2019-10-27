@@ -11,37 +11,35 @@ package main.leetcode.greedy;
  */
 
 public class number860 {
-    class Solution {
-        public boolean lemonadeChange(int[] bills) {
-            int five = 0, ten = 0;
-            for (int bill :
-                    bills) {
-                if (bill == 5) {
-                    five++;
+    public boolean lemonadeChange(int[] bills) {
+        int five = 0, ten = 0;
+        for (int bill :
+                bills) {
+            if (bill == 5) {
+                five++;
+            }
+            if (bill == 10) {
+                if (five > 0) {
+                    five--;
+                    ten++;
                 }
-                if (bill == 10) {
+                return false;
+            } else {
+                if (ten > 0) {
                     if (five > 0) {
                         five--;
-                        ten++;
+                        ten--;
                     }
                     return false;
                 } else {
-                    if (ten > 0) {
-                        if (five > 0) {
-                            five--;
-                            ten--;
-                        }
-                        return false;
-                    } else {
-                        if (five >= 3) {
-                            five -= 3;
-                        }
-                        return false;
+                    if (five >= 3) {
+                        five -= 3;
                     }
+                    return false;
                 }
             }
-            return true;
         }
+        return true;
     }
 }
 

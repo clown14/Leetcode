@@ -20,25 +20,23 @@ package main.leetcode.greedy;
  */
 
 public class number1053 {
-    class Solution {
-        public int[] prevPermOpt1(int[] A) {
-            if (A.length <= 1) {
-                return A;
-            }
-            for (int i = A.length - 1; i > 0; i--) {
-                if (A[i - 1] > A[i]) {
-                    int j = A.length - 1;
-                    while (A[j] >= A[i - 1] || A[j] == A[j - 1]) {
-                        j--;
-                    }
-                    int tmp = A[j];
-                    A[j] = A[i - 1];
-                    A[i - 1] = tmp;
-                    break;
-                }
-            }
+    public int[] prevPermOpt1(int[] A) {
+        if (A.length <= 1) {
             return A;
         }
+        for (int i = A.length - 1; i > 0; i--) {
+            if (A[i - 1] > A[i]) {
+                int j = A.length - 1;
+                while (A[j] >= A[i - 1] || A[j] == A[j - 1]) {
+                    j--;
+                }
+                int tmp = A[j];
+                A[j] = A[i - 1];
+                A[i - 1] = tmp;
+                break;
+            }
+        }
+        return A;
     }
 }
 

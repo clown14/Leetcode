@@ -13,22 +13,20 @@ package main.leetcode.greedy;
  */
 
 public class number55 {
-    class Solution {
-        public boolean canJump(int[] nums) {
-            if (nums == null || nums.length == 0) {
+    public boolean canJump(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return false;
+        }
+        int reach = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > reach) {
                 return false;
             }
-            int reach = 0;
-            for (int i = 0; i < nums.length; i++) {
-                if (i > reach) {
-                    return false;
-                }
-                if (i + nums[i] < reach) {
-                    reach = i + nums[i];
-                }
+            if (i + nums[i] < reach) {
+                reach = i + nums[i];
             }
-            return true;
         }
+        return true;
     }
 }
 

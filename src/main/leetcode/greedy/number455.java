@@ -15,23 +15,21 @@ import java.util.Arrays;
  */
 
 public class number455 {
-    class Solution {
-        public int findContentChildren(int[] g, int[] s) {
-            Arrays.sort(g);
-            Arrays.sort(s);
-            int count=0;
-            int j = 0;
-            for (int i = 0; i < g.length; i++) {
-                for (; j < s.length; j++) {
-                    if (s[j] >= g[i]) {
-                        j++;
-                        count++;
-                        break;
-                    }
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+        int count=0;
+        int j = 0;
+        for (int i = 0; i < g.length; i++) {
+            for (; j < s.length; j++) {
+                if (s[j] >= g[i]) {
+                    j++;
+                    count++;
+                    break;
                 }
             }
-            return count;
         }
+        return count;
     }
 }
     

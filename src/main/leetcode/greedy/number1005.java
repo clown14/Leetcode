@@ -14,25 +14,23 @@ import java.util.Arrays;
  */
 
 public class number1005 {
-    class Solution {
-        public int largestSumAfterKNegations(int[] A, int K) {
-            Arrays.sort(A);
-            int sum = 0;
-            for (int i = 0; i < A.length; i++) {
-                if (K>0) {
-                    if (A[i] < 0) {
-                        A[i] = -A[i];
-                        K--;
-                    }
+    public int largestSumAfterKNegations(int[] A, int K) {
+        Arrays.sort(A);
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (K>0) {
+                if (A[i] < 0) {
+                    A[i] = -A[i];
+                    K--;
                 }
-                sum += A[i];
             }
-            Arrays.sort(A);
-            if (K > 0 && K % 2 != 0) {
-                sum -= A[0];
-            }
-            return sum;
+            sum += A[i];
         }
+        Arrays.sort(A);
+        if (K > 0 && K % 2 != 0) {
+            sum -= A[0];
+        }
+        return sum;
     }
 }
 
