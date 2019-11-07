@@ -24,6 +24,7 @@ public class number503 {
                 stack.push(i);
             }
         }
+        return next;
     }
 }
 
