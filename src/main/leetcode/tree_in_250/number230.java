@@ -1,4 +1,4 @@
-package main.leetcode.tree;
+package main.leetcode.tree_in_250;
 
 import java.util.ArrayList;
 import java.util.List;
