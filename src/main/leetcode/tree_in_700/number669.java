@@ -1,6 +1,4 @@
-package main.leetcode.tree_in_500;
-
-import com.sun.org.apache.regexp.internal.RE;
+package main.leetcode.tree_in_700;
 
 /**
  * @program: Leetcode

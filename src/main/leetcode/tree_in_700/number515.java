@@ -1,4 +1,4 @@
-package main.leetcode.tree_in_500;
+package main.leetcode.tree_in_700;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,23 +8,30 @@ import java.util.Queue;
 /**
  * @program: Leetcode
  * @author: onion
- * @create: 2019-12-07 15:43
+ * @create: 2019-11-30 20:13
  **/
 
-public class number637 {
-    public List<Double> averageOfLevels(TreeNode root) {
-        List<Double> res = new ArrayList<>();
+/*
+按层次遍历二叉树，计算每层的最大值即可。
+ */
+
+public class number515 {
+    public List<Integer> largestValues(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
         if (root == null) {
             return res;
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
+
         while (!queue.isEmpty()) {
-            double sum=0.0;
-            int layerSize = queue.size();
-            for (int i = 0; i < layerSize; i++) {
+            int size = queue.size();
+            int max = Integer.MIN_VALUE;
+            for (int i = 0; i < size; i++) {
                 root = queue.poll();
-                sum += root.val;
+                if (root.val > max) {
+                    max = root.val;
+                }
                 if (root.left != null) {
                     queue.offer(root.left);
                 }
@@ -32,10 +39,11 @@ public class number637 {
                     queue.offer(root.right);
                 }
             }
-            res.add(sum / layerSize);
+            res.add(max);
         }
         return res;
     }
 }
+
 
     
