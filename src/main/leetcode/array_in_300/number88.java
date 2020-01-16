@@ -1,4 +1,4 @@
-package main.leetcode.array;
+package main.leetcode.array_in_300;
 
 /**
  * @program: Leetcode

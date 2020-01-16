@@ -1,4 +1,4 @@
-package main.leetcode.array;
+package main.leetcode.array_in_300;
 
 import java.util.Collections;
 import java.util.Comparator;
