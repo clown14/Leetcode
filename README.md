@@ -6,6 +6,8 @@
 [Tree in 250](https://github.com/clown14/Leetcode/tree/master/src/main/leetcode/tree_in_250)  
 [Tree in 700](https://github.com/clown14/Leetcode/tree/master/src/main/leetcode/tree_in_500)  
 [Array in 300](https://github.com/clown14/Leetcode/tree/master/src/main/leetcode/array_in_300)  
+[DP](https://github.com/clown14/Leetcode/tree/master/src/main/leetcode/DP)  
+[Sort](https://github.com/clown14/Leetcode/tree/master/src/main/leetcode/sort)  
 
 
 
