@@ -1,4 +1,4 @@
-package main.leetcode.tree_in_700;
+package main.leetcode.tree_in_1300;
 
 /**
  * @program: Leetcode
