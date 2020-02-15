@@ -21,6 +21,7 @@ public class number783 {
         for (int i = 1; i < values.size(); i++) {
             min = Math.min(min, values.get(i) - values.get(i - 1));
         }
+        return min;
     }
 
     private void inOrder(TreeNode root, List<Integer> values) {
