@@ -26,6 +26,7 @@ public class number1008 {
             root.left = constructor(nums, start + 1, index - 1);
             root.right = constructor(nums, index, end);
         }
+        return root;
     }
 
     private int getIndex(int[] nums, int start, int end, int rootVal) {
