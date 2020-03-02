@@ -34,8 +34,8 @@ public class number1008 {
             if (nums[i] > rootVal) {
                 return i;
             }
-            return -1;
         }
+        return -1;
     }
 }
 
