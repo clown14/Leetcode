@@ -14,7 +14,7 @@ import java.util.Queue;
 层次遍历，拿到每一层的最后一个节点值即为二叉树的右视图。
  */
 
-public class numbe199 {
+public class number199 {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> res = new LinkedList<>();
         if (root == null) {
