@@ -26,8 +26,8 @@ public class number108 {
         }
         int mid = (high - low) / 2;
         TreeNode node = new TreeNode(numbs[mid]);
-        BST(numbs, low, mid - 1);
-        BST(numbs, mid + 1, high);
+        node.left = BST(numbs, low, mid - 1);
+        node.right = BST(numbs, mid + 1, high);
         return node;
     }
 }
