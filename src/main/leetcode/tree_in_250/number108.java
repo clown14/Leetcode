@@ -10,7 +10,6 @@ package main.leetcode.tree_in_250;
 所谓平衡的定义，就是指二叉树的子树高度之差不能超过1。
 如果要从一个有序数组中选择一个元素作为根结点，应该选择哪个元素呢？我们应该选择有序数组的中间元素作为根结点。
 选择了中间元素作为根结点并创建后，剩下的元素分为两部分，可以看作是两个数组。这样剩下的元素在根结点左边的作为左子树，右边的作为右子树。
-
  */
 public class number108 {
     public TreeNode sortedArrayToBST(int[] numbs) {
