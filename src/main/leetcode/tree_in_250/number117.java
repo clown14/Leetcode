@@ -25,7 +25,7 @@ public class number117 {
         return findToLinkedNode(node.next);
     }
 
-    public Node connedt(Node root) {
+    public Node connect(Node root) {
         if (root == null) {
             return null;
         }
@@ -39,8 +39,8 @@ public class number117 {
         if (root.right != null) {
             root.right.next = findToLinkedNode(root.next);
         }
-        connedt(root.right);
-        connedt(root.left);
+        connect(root.right);
+        connect(root.left);
         return root;
     }
 }

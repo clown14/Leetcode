@@ -7,6 +7,8 @@ package main.leetcode.tree_in_250;
  **/
 
 public class number116 {
+
+    //递归
     public Node connect(Node root) {
         if (root == null) {
             return null;
