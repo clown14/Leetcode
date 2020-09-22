@@ -1,6 +1,8 @@
 package main.leetcode.CodingInterviews;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @program: Leetcode
@@ -17,6 +19,20 @@ public class interview03 {
             }
         }
         return -1;
+    }
+
+    //HashSet
+    public int findRepeatNumber2(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        int repeat = -1;
+        for (int num:
+             nums) {
+            if (!set.add(num)) {
+                repeat = num;
+                break;
+            }
+        }
+        return repeat;
     }
 }
 

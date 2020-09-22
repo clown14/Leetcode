@@ -12,6 +12,8 @@ package main.leetcode.tree_in_250;
  */
 
 public class number124 {
+
+    //递归
     private int sum = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
         if (root == null) {
@@ -30,6 +32,7 @@ public class number124 {
         sum = Math.max(sum, left + right + root.val);
         return Math.max(left + root.val, right + root.val);
     }
+
 }
 
     
